@@ -1,0 +1,13 @@
+.string {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  margin: 8px 8px;
+  transition: transform 0.1s;
+  cursor: pointer;
+}
+
+.string:active {
+  transform: scaleX(1.03);
+  background-color: #cc0f0f;
+}
