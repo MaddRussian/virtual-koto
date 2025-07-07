@@ -1,10 +1,10 @@
 import React from "react";
-import StringGroup from "../StringGroup/StringGroup";
+import Koto from "../Koto/Koto";
 
 function App() {
   return (
     <div>
-      <StringGroup />
+      <Koto />
     </div>
   )
 }
