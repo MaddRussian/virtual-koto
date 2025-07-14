@@ -18,3 +18,5 @@ function BridgeGroup() {
     </div>
   );
 }
+
+export default BridgeGroup;
