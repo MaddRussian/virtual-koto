@@ -1,16 +1,16 @@
 .bridge {
-  width: 40px;
-  height: 60px;
+  width: 24px;
+  height: 32px;
   background: #e0c097;
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin: 0 8px;
+  margin: 0 4px;
   position: relative;
 }
 
 .bridge-first, .bridge-last {
-  background: #bfa06a
+  background: #bfa06a,
 }
