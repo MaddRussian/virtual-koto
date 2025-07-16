@@ -1,13 +1,13 @@
 .koto {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 600px;
-  width: 700px;
-  background: #e3860d;
-  border-radius: 60px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-  margin: 40px auto;
+  height: 100vh;
+  width: 100vw;
+}
+
+.koto-overlay-container {
   position: relative;
+  width: 100vw;
+  height: 500px;
 }

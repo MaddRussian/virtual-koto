@@ -6,8 +6,10 @@ import BridgeGroup from "../BridgeGroup/BridgeGroup";
 function Koto() {
   return (
     <div className="koto">
-      <StringGroup />
-      <BridgeGroup />
+      <div className="koto-overlay-container">
+        <StringGroup />
+        <BridgeGroup />
+      </div>
     </div>
   )
 }
