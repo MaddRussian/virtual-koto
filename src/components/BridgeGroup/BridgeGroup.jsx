@@ -22,28 +22,33 @@ const HIRAJOSHI_POSITIONS = [
 function BridgeGroup() {
   const bridgeCount = 13;
   const bridgePositions = Array.from({ length: bridgeCount }, (_, i) => i);
-  const containerHeight = 500; // Should match string-group height
-  const verticalSpacing = containerHeight / (bridgeCount - 1);
+  const containerHeight = 650; // Should match string-group height
+  const bridgeHeight = 40; // px, should match .bridge height
 
   return (
     <div className="bridge-group" style={{ height: containerHeight }}>
-      {bridgePositions.map((i) => (
-        <div
-          key={i}
-          style={{
-            position: "absolute",
-            left: `calc(${HIRAJOSHI_POSITIONS[i] * 100}% - 14px)`, // 14px is half bridge width
-            top: i * verticalSpacing - 20, // 20px is half bridge height for centering
-            zIndex: 2,
-          }}
-        >
-          <Bridge
-            position={i}
-            isFirst={i === 0}
-            isLast={i === bridgeCount - 1}
-          />
-        </div>
-      ))}
+      {bridgePositions.map((i) => {
+        // Improved calculation: center of string is at (i + 0.5) * (containerHeight / bridgeCount)
+        const stringCenter = (i + 0.5) * (containerHeight / bridgeCount);
+        const top = stringCenter - bridgeHeight;
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: `calc(${10 + HIRAJOSHI_POSITIONS[i] * 80}% - 14px)`, // Squeezed into 10%-90%
+              top: `${top}px`,
+              zIndex: 2,
+            }}
+          >
+            <Bridge
+              position={i}
+              isFirst={i === 0}
+              isLast={i === bridgeCount - 1}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
